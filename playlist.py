@@ -57,12 +57,12 @@ class Playlist(EventEmitter, Serializable):
 
     async def add_entry(self, song_url, **meta):
         """
-            Validates and adds a song_url to be played. This does not start the download of the song.
+		재생할 song_url의 유효성을 검사하고 추가합니다. 노래를 다운로드하지 않습니다.
 
-            Returns the entry & the position it is in the queue.
+             대기열에있는 항목 및 위치를 반환합니다.
 
-            :param song_url: The song url to add to the playlist.
-            :param meta: Any additional metadata to add to the playlist entry.
+             : param song_url : 재생 목록에 추가 할 노래 URL입니다.
+             : param meta : 재생 목록 항목에 추가 할 추가 메타 데이터입니다.
         """
 
         try:
